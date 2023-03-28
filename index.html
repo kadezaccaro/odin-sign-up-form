@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="side-hero">
+      <div class="logo-container">
+        <img
+          class="odin-logomark"
+          src="images/odin-lined.png"
+          alt="odin logomark"
+        />
+        <div class="dim-overlay"></div>
+        <span class="odin-logotype">The Odin Project</span>
+      </div>
+
+      <figure>
+        <img class="hero-img" src="images/palm-leaves.jpg" alt="palm leaves" />
+        <figcaption>
+          Photo by
+          <a href="https://unsplash.com/@codypboard">Cody Board</a> on
+          <a href="https://unsplash.com/">Unsplash</a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <main>
+      <header>
+        <h1>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+          inventore provident ut suscipit recusandae tempora odit quos
+          accusamus.
+          <br />
+          <br />
+          Sign up <em>now</em> to get started.
+        </h1>
+      </header>
+
+      <form id="sign-up" action="#">
+        <h2>Let's do this!</h2>
+
+        <label for="first-name">
+          First name
+          <input type="text" name="first-name" id="first-name" required />
+        </label>
+
+        <label for="first-name">
+          Last name
+          <input type="text" name="last-name" id="last-name" required />
+        </label>
+
+        <label for="first-name">
+          Email
+          <input type="email" name="email" id="email" required />
+        </label>
+
+        <label for="phone-number">
+          Phone number
+          <input type="tel" name="phone-number" id="phone-number" required />
+        </label>
+
+        <label for="password">
+          Password
+          <input type="password" name="password" id="password" required />
+        </label>
+
+        <label for="confirm-password">
+          Confirm password
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            required
+          />
+        </label>
+      </form>
+
+      <div class="form-actions">
+        <button type="submit" form="sign-up">Create account</button>
+        <p class="existing-user">
+          Already have an account? <a href="#">Log in</a>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
