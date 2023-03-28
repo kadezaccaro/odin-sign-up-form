@@ -5,15 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <section class="side-hero">
@@ -23,7 +15,6 @@
           src="images/odin-lined.png"
           alt="odin logomark"
         />
-        <div class="dim-overlay"></div>
         <span class="odin-logotype">The Odin Project</span>
       </div>
 
@@ -51,34 +42,56 @@
 
       <form id="sign-up" action="#">
         <h2>Let's do this!</h2>
+        <p>An asterisk (*) indicates a required field</p>
 
         <label for="first-name">
-          First name
+          First name *
           <input type="text" name="first-name" id="first-name" required />
         </label>
 
         <label for="first-name">
-          Last name
+          Last name *
           <input type="text" name="last-name" id="last-name" required />
         </label>
 
         <label for="first-name">
-          Email
-          <input type="email" name="email" id="email" required />
+          Email *
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="sample@gmail.com"
+            required
+          />
         </label>
 
         <label for="phone-number">
-          Phone number
-          <input type="tel" name="phone-number" id="phone-number" required />
+          Phone number *
+          <input
+            type="tel"
+            name="phone-number"
+            id="phone-number"
+            placeholder="123-456-7890"
+            pattern="(\d{3}[-\.\s]?)?\d{3}[-\.\s]?\d{4}"
+            title="Example: 777-777-7777"
+            required
+          />
         </label>
 
         <label for="password">
-          Password
-          <input type="password" name="password" id="password" required />
+          Password *
+          <input
+            type="password"
+            name="password"
+            id="password"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+            title="The password must be at least 8 characters long and include at least one lowercase letter, one uppercase letter, and one digit."
+            required
+          />
         </label>
 
         <label for="confirm-password">
-          Confirm password
+          Confirm password *
           <input
             type="password"
             name="confirm-password"
