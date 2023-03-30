@@ -7,6 +7,7 @@
   --white: #fafafa;
   --accent-1: #558b2f;
   --accent-2: #ff7043;
+  --accent-3: #2962ff;
 }
 
 @font-face {
@@ -151,12 +152,34 @@ input {
 
 input:focus {
   outline: none;
-  border: 1px solid blue;
+  border: 1px solid var(--accent-3);
   box-shadow: 0 0 4px var(--mid);
 }
 
 ::placeholder {
   color: var(--mid);
+}
+
+.mismatch,
+.mismatch:focus {
+  border: 1px solid var(--accent-2);
+}
+
+.success {
+  display: none;
+  padding: 16px 64px;
+}
+
+.success-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.success-msg {
+  font-size: 32px;
+  margin-top: 8px;
+  color: var(--accent-3);
 }
 
 .form-actions {
