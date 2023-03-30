@@ -35,6 +35,10 @@ a {
   transition: 0.3s;
 }
 
+h1 {
+  font-weight: normal;
+}
+
 p {
   font-size: 18px;
 }
@@ -62,7 +66,6 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
   width: 160px;
   height: auto;
 }
@@ -74,7 +77,6 @@ p {
   transform: translate(-50%);
   color: var(--light);
   text-align: center;
-  z-index: 2;
   font-size: 56px;
   text-transform: uppercase;
   width: 100%;
@@ -117,8 +119,12 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px 64px;
-  padding: 48px 64px;
+  padding: 32px;
   background-color: var(--white);
+  border: 1px solid var(--mid);
+  border-radius: 8px;
+  margin: 0 64px 0 64px;
+  max-width: 1000px;
 }
 
 form h2,
@@ -161,7 +167,7 @@ input:focus {
 button {
   cursor: pointer;
   border: none;
-  padding: 16px 24px;
+  padding: 16px 32px;
   background-color: var(--accent-1);
   color: var(--light);
   border-radius: 8px;
@@ -181,6 +187,7 @@ button:hover {
 .existing-user a {
   color: var(--accent-1);
   font-weight: bold;
+  text-decoration: none;
 }
 
 .existing-user a:hover {
