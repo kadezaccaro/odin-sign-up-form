@@ -1,13 +1,19 @@
-/* || COLORS & FONTS */
+/* || COLORS & TYPOGRAPHY */
 
 :root {
-  --dark: #263238;
-  --mid: #90a4ae;
-  --light: #f5f5f5;
-  --white: #fafafa;
-  --accent-1: #558b2f;
-  --accent-2: #ff7043;
-  --accent-3: #2962ff;
+  --clr-mid: #90a4ae;
+  --clr-dark: #263238;
+  --clr-light: #f5f5f5;
+  --clr-white: #fafafa;
+  --clr-accent-1: #558b2f;
+  --clr-accent-2: #ff7043;
+  --clr-accent-3: #2962ff;
+
+  --fs-small: 0.875rem;
+  --fs-medium: 1.125rem;
+  --fs-medium-large: 1.5rem;
+  --fs-large: 2rem;
+  --fs-logotype: 3.5rem;
 }
 
 @font-face {
@@ -25,24 +31,22 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  color: var(--dark);
-  background-color: var(--light);
+  font-size: var(--fs-medium);
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 a {
-  color: var(--light);
+  color: var(--clr-light);
   transition: 0.3s;
 }
 
 h1 {
+  font-size: var(--fs-large);
   font-weight: normal;
-}
-
-p {
-  font-size: 18px;
 }
 
 /* || SIDE HERO */
@@ -55,33 +59,25 @@ p {
 }
 
 .logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: var(--clr-white);
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -20%);
   width: 100%;
-  height: 320px;
 }
 
 .odin-logomark {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 160px;
+  max-width: 160px;
   height: auto;
 }
 
 .odin-logotype {
-  position: absolute;
-  bottom: -32px;
-  left: 50%;
-  transform: translate(-50%);
-  color: var(--light);
-  text-align: center;
-  font-size: 56px;
-  text-transform: uppercase;
-  width: 100%;
+  font-size: var(--fs-logotype);
   font-family: norse-bold, sans-serif;
 }
 
@@ -90,8 +86,8 @@ figcaption {
   bottom: 24px;
   width: 100%;
   text-align: center;
-  font-size: 14px;
-  color: var(--light);
+  font-size: var(--fs-small);
+  color: var(--clr-light);
 }
 
 .hero-img {
@@ -111,7 +107,7 @@ main {
 }
 
 header {
-  padding: 48px 64px;
+  padding: 3rem 4rem;
   max-width: 1000px;
 }
 
@@ -120,8 +116,8 @@ form {
   grid-template-columns: 1fr 1fr;
   gap: 32px 64px;
   padding: 32px;
-  background-color: var(--white);
-  border: 1px solid var(--mid);
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-mid);
   border-radius: 8px;
   margin: 0 64px 0 64px;
   max-width: 1000px;
@@ -134,17 +130,17 @@ p {
 
 label {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: var(--fs-small);
   font-weight: bold;
   letter-spacing: 1px;
 }
 
 input {
-  font-size: 18px;
+  font-size: var(--fs-medium);
   padding: 12px;
-  border: 1px solid var(--mid);
+  border: 1px solid var(--clr-mid);
   border-radius: 4px;
-  background-color: var(--white);
+  background-color: var(--clr-white);
   width: 100%;
   margin-top: 8px;
   display: block;
@@ -152,34 +148,17 @@ input {
 
 input:focus {
   outline: none;
-  border: 1px solid var(--accent-3);
-  box-shadow: 0 0 4px var(--mid);
+  border: 1px solid var(--clr-accent-3);
+  box-shadow: 0 0 4px var(--clr-mid);
 }
 
 ::placeholder {
-  color: var(--mid);
+  color: var(--clr-mid);
 }
 
 .mismatch,
 .mismatch:focus {
-  border: 1px solid var(--accent-2);
-}
-
-.success {
-  display: none;
-  padding: 16px 64px;
-}
-
-.success-img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.success-msg {
-  font-size: 32px;
-  margin-top: 8px;
-  color: var(--accent-3);
+  border: 1px solid var(--clr-accent-2);
 }
 
 .form-actions {
@@ -190,16 +169,16 @@ button {
   cursor: pointer;
   border: none;
   padding: 16px 32px;
-  background-color: var(--accent-1);
-  color: var(--light);
+  background-color: var(--clr-accent-1);
+  color: var(--clr-light);
   border-radius: 8px;
-  font-size: 24px;
+  font-size: var(--fs-medium-large);
   transition: 0.3s;
 }
 
 button:hover {
   transform: translateY(-4px);
-  background-color: var(--dark);
+  background-color: var(--clr-dark);
 }
 
 .existing-user {
@@ -207,11 +186,121 @@ button:hover {
 }
 
 .existing-user a {
-  color: var(--accent-1);
+  color: var(--clr-accent-1);
   font-weight: bold;
   text-decoration: none;
 }
 
 .existing-user a:hover {
-  color: var(--dark);
+  color: var(--clr-dark);
+}
+
+/* || SUCCESS */
+
+.success {
+  display: none;
+  padding: 16px 64px;
+}
+
+.success-img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.success-msg {
+  font-size: var(--fs-medium-large);
+  margin-top: 8px;
+  color: var(--clr-accent-3);
+}
+
+/* || RESPONSIVE */
+
+@media screen and (max-width: 1720px) {
+  .side-hero {
+    flex-shrink: 1.5;
+  }
+}
+
+@media screen and (max-width: 1280px), screen and (max-height: 880px) {
+  body {
+    flex-direction: column;
+  }
+
+  .side-hero {
+    height: auto;
+    min-height: 400px;
+  }
+
+  .logo-container {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .odin-logomark {
+    max-width: 144px;
+  }
+
+  figcaption {
+    opacity: 0.5;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    text-align: center;
+    padding: 64px;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  form {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-actions {
+    padding: 0;
+  }
+
+  .success {
+    padding: 0;
+  }
+
+  .success-img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 14px; /* update base font size for responsive type with rem */
+  }
+
+  .odin-logomark {
+    max-width: 120px;
+  }
+
+  main {
+    padding: 32px;
+    gap: 32px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-actions {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
 }
